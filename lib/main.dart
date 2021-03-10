@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Harga Awal",
+                      "Diskon",
                       style: TextStyle(fontFamily: "times new roman"),
                     ),
                     TextFormField(
@@ -71,21 +71,16 @@ class MyApp extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.all(8),
-                child: Column(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Harga Awal",
+                      "Harga Akhir",
                       style: TextStyle(fontFamily: "times new roman"),
                     ),
-                    TextFormField(
-                      decoration: InputDecoration(hintText: "0"),
-                      keyboardType: TextInputType.numberWithOptions(),
-                      validator: (String value) {
-                        if (value.isEmpty) {
-                          return 'Enter some Text';
-                        }
-                        return null;
-                      },
+                    Text(
+                      "Harga Akhir",
+                      style: TextStyle(fontFamily: "times new roman"),
                     ),
                   ],
                 ),
