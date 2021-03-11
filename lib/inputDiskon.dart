@@ -12,24 +12,28 @@ class inputDiskon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(8),
-      child: Column(
+      child: Row(
         children: [
-          Text(
-            "Diskon",
-            style: TextStyle(fontFamily: "times new roman", fontSize: 16),
+          Expanded(
+            child: Text(
+              "Diskon",
+              style: TextStyle(fontFamily: "times new roman", fontSize: 16),
+            ),
           ),
-          TextFormField(
-            controller: diskonController,
-            decoration: InputDecoration(hintText: "0"),
-            textAlign: TextAlign.end,
-            keyboardType: TextInputType.numberWithOptions(),
-            validator: (String value) {
-              if (value.isEmpty) {
-                return 'Enter Number';
-              }
-              return null;
-            },
-          ),
+          Expanded(
+            child: TextFormField(
+              controller: diskonController,
+              decoration: InputDecoration(hintText: "0"),
+              textAlign: TextAlign.end,
+              keyboardType: TextInputType.numberWithOptions(),
+              validator: (String value) {
+                if (value.isEmpty) {
+                  return 'Enter Number';
+                }
+                return null;
+              },
+            ),
+          )
         ],
       ),
     );

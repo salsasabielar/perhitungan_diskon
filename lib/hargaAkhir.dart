@@ -16,13 +16,18 @@ class hargaAkhir extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            "Harga Akhir",
-            style: TextStyle(fontFamily: "times new roman", fontSize: 16),
+          Expanded(
+            child: Text(
+              "Harga Akhir",
+              style: TextStyle(fontFamily: "times new roman", fontSize: 16),
+            ),
           ),
-          Text(
-            _hasil.toStringAsFixed(0),
-            style: TextStyle(fontFamily: "times new roman", fontSize: 16),
+          Expanded(
+            child: Text(
+              _hasil.toStringAsFixed(0),
+              textAlign: TextAlign.right,
+              style: TextStyle(fontFamily: "times new roman", fontSize: 16),
+            ),
           ),
         ],
       ),
