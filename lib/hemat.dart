@@ -12,12 +12,12 @@ class hemat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
-      child: Row(
+      margin: EdgeInsets.only(top: 30, bottom: 30),
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Hemat " + _hemat.toStringAsFixed(0),
+            "Anda Hemat " + _hemat.toStringAsFixed(0),
             style: TextStyle(
               fontFamily: "times new roman",
               fontSize: 16,

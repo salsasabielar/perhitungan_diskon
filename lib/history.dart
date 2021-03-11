@@ -17,7 +17,10 @@ class history extends StatelessWidget {
             margin: EdgeInsets.all(10),
             child: Text(
               value,
-              style: TextStyle(fontSize: 15, fontFamily: "times new roman"),
+              style: TextStyle(
+                fontSize: 15,
+                fontFamily: "times new roman",
+              ),
             ));
       }).toList()),
     );

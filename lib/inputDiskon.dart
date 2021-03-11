@@ -4,9 +4,11 @@ class inputDiskon extends StatelessWidget {
   const inputDiskon({
     Key key,
     @required this.diskonController,
+    //@required this.hitungDiskon,
   }) : super(key: key);
 
   final TextEditingController diskonController;
+  //final Function hitungDiskon;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +25,10 @@ class inputDiskon extends StatelessWidget {
           Expanded(
             child: TextFormField(
               controller: diskonController,
+              // onChanged: hitungDiskon,
               decoration: InputDecoration(hintText: "0"),
               textAlign: TextAlign.end,
+              style: TextStyle(fontFamily: "times new roman", fontSize: 16),
               keyboardType: TextInputType.numberWithOptions(),
               validator: (String value) {
                 if (value.isEmpty) {

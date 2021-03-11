@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import 'enterButtton.dart';
+import 'enterButton.dart';
 import 'hargaAkhir.dart';
 import 'hargaAwal.dart';
 import 'hemat.dart';
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
   final diskonController = TextEditingController();
   List<String> listViewItem = List<String>();
 
-  void _hitungDiskon() {
+  _hitungDiskon() {
     setState(() {
       _inputHarga = double.parse(hargaController.text);
       _inputDiskon = double.parse(diskonController.text);
@@ -55,21 +55,27 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         body: Container(
-          margin: EdgeInsets.all(15),
+          margin: EdgeInsets.all(25),
           child: Column(
             children: <Widget>[
               HargaAwal(hargaController: hargaController),
-              inputDiskon(diskonController: diskonController),
+              inputDiskon(
+                diskonController: diskonController,
+                //hitungDiskon: _hitungDiskon,
+              ),
               hargaAkhir(hasil: _hasil),
               hemat(hemat: _hemat),
               enterButton(
                 hitungDiskon: _hitungDiskon,
               ),
               Container(
-                margin: EdgeInsets.only(top: 10, bottom: 10),
+                margin: EdgeInsets.only(top: 30, bottom: 10),
                 child: Text(
-                  "History",
-                  style: TextStyle(fontSize: 16, fontFamily: "times new roman"),
+                  "RIWAYAT",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: "times new roman",
+                      fontWeight: FontWeight.bold),
                 ),
               ),
               history(listViewItem: listViewItem),

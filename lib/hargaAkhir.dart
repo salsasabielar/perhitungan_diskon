@@ -12,7 +12,7 @@ class hargaAkhir extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.fromLTRB(8, 20, 8, 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
