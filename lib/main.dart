@@ -19,6 +19,7 @@ class _MyAppState extends State<MyApp> {
   double _hemat = 0;
   final hargaController = TextEditingController();
   final diskonController = TextEditingController();
+  List<String> listViewItem = List<String>();
 
   void _hitungDiskon() {
     setState(() {
@@ -27,6 +28,7 @@ class _MyAppState extends State<MyApp> {
       _hasil = _inputHarga - (_inputHarga * (_inputDiskon / 100));
       _hemat = _inputHarga - _hasil;
     });
+    listViewItem.add("$_inputHarga to $_hasil");
   }
 
   Widget build(BuildContext context) {
@@ -129,6 +131,25 @@ class _MyAppState extends State<MyApp> {
                       style: TextStyle(
                           fontSize: 16, fontFamily: "times new roman")),
                 ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "History",
+                  style: TextStyle(fontSize: 16, fontFamily: "times new roman"),
+                ),
+              ),
+              Expanded(
+                child: ListView(
+                    children: listViewItem.map((String value) {
+                  return Container(
+                      margin: EdgeInsets.all(10),
+                      child: Text(
+                        value,
+                        style: TextStyle(
+                            fontSize: 15, fontFamily: "times new roman"),
+                      ));
+                }).toList()),
               ),
             ],
           ),
