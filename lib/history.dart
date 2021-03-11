@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class listView extends StatelessWidget {
-  const listView({
+class history extends StatelessWidget {
+  const history({
     Key key,
     @required this.listViewItem,
   }) : super(key: key);

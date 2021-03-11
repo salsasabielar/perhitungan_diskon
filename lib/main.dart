@@ -6,8 +6,8 @@ import 'enterButtton.dart';
 import 'hargaAkhir.dart';
 import 'hargaAwal.dart';
 import 'hemat.dart';
+import 'history.dart';
 import 'inputDiskon.dart';
-import 'listView.dart';
 
 void main() {
   runApp(MyApp());
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
                   style: TextStyle(fontSize: 16, fontFamily: "times new roman"),
                 ),
               ),
-              listView(listViewItem: listViewItem),
+              history(listViewItem: listViewItem),
             ],
           ),
         ),
