@@ -28,7 +28,8 @@ class _MyAppState extends State<MyApp> {
       _hasil = _inputHarga - (_inputHarga * (_inputDiskon / 100));
       _hemat = _inputHarga - _hasil;
     });
-    listViewItem.add("$_inputHarga to $_hasil");
+    listViewItem.add(
+        _inputHarga.toStringAsFixed(0) + " to " + _hasil.toStringAsFixed(0));
   }
 
   Widget build(BuildContext context) {
@@ -119,6 +120,21 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               Container(
+                margin: EdgeInsets.all(8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Hemat " + _hemat.toStringAsFixed(0),
+                      style: TextStyle(
+                        fontFamily: "times new roman",
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
                 width: double.infinity,
                 height: 50,
                 child: RaisedButton(
@@ -129,7 +145,9 @@ class _MyAppState extends State<MyApp> {
                   textColor: Colors.black,
                   child: Text("Enter",
                       style: TextStyle(
-                          fontSize: 16, fontFamily: "times new roman")),
+                          fontSize: 16,
+                          fontFamily: "times new roman",
+                          fontWeight: FontWeight.bold)),
                 ),
               ),
               Container(
