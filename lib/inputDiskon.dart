@@ -8,7 +8,7 @@ class inputDiskon extends StatelessWidget {
     //@required this.hitungDiskon,
   }) : super(key: key); //inisialisasi sebagai subclass main
 
-  final TextEditingController diskonController; //deklarasi konstruktor
+  final TextEditingController diskonController; //deklarasi controller
   //final Function hitungDiskon;
 
   @override
@@ -16,6 +16,7 @@ class inputDiskon extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(8),
       child: Row(
+        //menampung widget di dalam container
         //creates a horizontal array of children
         children: [
           Expanded(

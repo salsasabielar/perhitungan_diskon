@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class HargaAwal extends StatelessWidget {
   const HargaAwal({
     Key key,
-    @required this.hargaController,
+    @required this.hargaController, //parameter
   }) : super(key: key);
 
-  final TextEditingController hargaController;
+  final TextEditingController hargaController; //deklarasi Controller
 
   @override
   Widget build(BuildContext context) {

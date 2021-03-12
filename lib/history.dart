@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class history extends StatelessWidget {
   const history({
     Key key,
-    @required this.listViewItem,
-  }) : super(key: key);
+    @required this.listViewItem, //parameter
+  }) : super(key: key); //inisialisasi sebagai subclass main
 
-  final List<String> listViewItem;
+  final List<String> listViewItem; //deklarasi variabel array
 
   @override
   Widget build(BuildContext context) {

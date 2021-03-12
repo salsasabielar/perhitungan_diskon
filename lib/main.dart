@@ -30,6 +30,13 @@ class _MyAppState extends State<MyApp> {
   List<String> listViewItem =
       List<String>(); //membuat variabel bertipe list<String>
 
+  void initState() {
+    super.initState();
+
+    // Start listening to changes.
+    diskonController.addListener(_hitungDiskon);
+  }
+
   _hitungDiskon() {
     //fungsi
     setState(() {

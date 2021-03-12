@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class enterButton extends StatelessWidget {
   const enterButton({
     Key key,
-    @required this.hitungDiskon,
+    @required this.hitungDiskon, //parameter
   }) : super(key: key);
-  final Function hitungDiskon;
+  final Function hitungDiskon; //deklarasi fungsi
 
   @override
   Widget build(BuildContext context) {

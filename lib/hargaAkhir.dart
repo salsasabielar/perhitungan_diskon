@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class hargaAkhir extends StatelessWidget {
   const hargaAkhir({
     Key key,
-    @required double hasil,
+    @required double hasil, //parameter
   })  : _hasil = hasil,
         super(key: key);
 
@@ -14,6 +14,7 @@ class hargaAkhir extends StatelessWidget {
     return Container(
       margin: EdgeInsets.fromLTRB(8, 20, 8, 8), //mengatur jarak antar widget
       child: Row(
+        //menampung widget di dalam container
         mainAxisAlignment: MainAxisAlignment
             .spaceBetween, //mengatur posisi secara mendatar pada row
         children: [
@@ -24,6 +25,7 @@ class hargaAkhir extends StatelessWidget {
             ),
           ),
           Expanded(
+            //memenuhi ruang kosong
             child: Text(
               _hasil.toStringAsFixed(
                   0), //menampilkan hasil dengan memanggil variabel
