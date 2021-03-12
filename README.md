@@ -1,4 +1,9 @@
 # perhitungan_diskon
+HASIL SCREENSHOT
+<p>PERHITUNGAN DISKON UNTUK KUIS 1</p>
+
+![plot](./image/hasil.jpg)
+
 
 A new Flutter project.
 
