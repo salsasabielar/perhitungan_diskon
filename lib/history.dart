@@ -13,6 +13,7 @@ class history extends StatelessWidget {
     return Expanded(
       child: ListView(
           children: listViewItem.map((String value) {
+        //menampilkan hasil listViewItem
         return Container(
             margin: EdgeInsets.all(10),
             child: Text(
@@ -22,7 +23,7 @@ class history extends StatelessWidget {
                 fontFamily: "times new roman",
               ),
             ));
-      }).toList()),
+      }).toList()), //membuat list dari listViewItem yang berurutan
     );
   }
 }

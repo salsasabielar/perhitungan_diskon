@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 class inputDiskon extends StatelessWidget {
   const inputDiskon({
+    //konstruktor
     Key key,
-    @required this.diskonController,
+    @required this.diskonController, //parameter
     //@required this.hitungDiskon,
-  }) : super(key: key);
+  }) : super(key: key); //inisialisasi sebagai subclass main
 
-  final TextEditingController diskonController;
+  final TextEditingController diskonController; //deklarasi konstruktor
   //final Function hitungDiskon;
 
   @override
@@ -15,6 +16,7 @@ class inputDiskon extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(8),
       child: Row(
+        //creates a horizontal array of children
         children: [
           Expanded(
             child: Text(
@@ -24,13 +26,16 @@ class inputDiskon extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              controller: diskonController,
+              //untuk inputan
+              controller: diskonController, //untuk menerima inputan user
               // onChanged: hitungDiskon,
               decoration: InputDecoration(hintText: "0"),
               textAlign: TextAlign.end,
               style: TextStyle(fontFamily: "times new roman", fontSize: 16),
-              keyboardType: TextInputType.numberWithOptions(),
+              keyboardType: TextInputType
+                  .numberWithOptions(), //agar keyboard hanya untuk angka
               validator: (String value) {
+                //memvalidasi inputan user
                 if (value.isEmpty) {
                   return 'Enter Number';
                 }

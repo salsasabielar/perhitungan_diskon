@@ -7,14 +7,15 @@ class hargaAkhir extends StatelessWidget {
   })  : _hasil = hasil,
         super(key: key);
 
-  final double _hasil;
+  final double _hasil; //deklarasi parameter yang terdapat di konstruktor
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(8, 20, 8, 8),
+      margin: EdgeInsets.fromLTRB(8, 20, 8, 8), //mengatur jarak antar widget
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment
+            .spaceBetween, //mengatur posisi secara mendatar pada row
         children: [
           Expanded(
             child: Text(
@@ -24,7 +25,8 @@ class hargaAkhir extends StatelessWidget {
           ),
           Expanded(
             child: Text(
-              _hasil.toStringAsFixed(0),
+              _hasil.toStringAsFixed(
+                  0), //menampilkan hasil dengan memanggil variabel
               textAlign: TextAlign.right,
               style: TextStyle(fontFamily: "times new roman", fontSize: 16),
             ),

@@ -10,10 +10,11 @@ class enterButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: double.infinity, //agar lebar button penuh
       height: 50,
       child: RaisedButton(
-        onPressed: hitungDiskon,
+        //wiget ntuk membuat button
+        onPressed: hitungDiskon, //agar button bisa diklik
         color: Colors.yellow,
         textColor: Colors.black,
         child: Text("Enter",
